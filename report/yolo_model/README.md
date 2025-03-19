@@ -1,0 +1,1 @@
+Contains downloaded yolo model

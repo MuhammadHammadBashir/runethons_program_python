@@ -1,0 +1,79 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+runethons/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs and debugging
+logs/
+*.log
+*.out
+*.err
+
+# Python environment files
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Docker / Virtualization
+*.dockerfile
+*.vagrant
+.vagrant/
+.DS_Store
+
+# Environment variables
+.env
+.envrc
+.secret
+config.json
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+*.cover
+nosetests.xml
+coverage.xml
+
+# MyPy type-checking
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Profiling data
+*.prof
+*.lprof
+
+# PyCharm
+*.iml
+.idea/
+
+
+#custom files
+report/yolo_model/yolov8l.pt
+report/asset/filtered-video-frames
+report/asset/video_upload
+report/asset/video-frames
+report/.env
