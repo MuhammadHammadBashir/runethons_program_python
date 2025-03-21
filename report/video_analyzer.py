@@ -40,8 +40,8 @@ class VideoAnalyzer:
 
     def analyze(self):
         """Runs the full video analysis process sequentially."""
-        # self.extract_frames(self.video_path, 30)
-        # self.intelligent_filter_frames()
+        self.extract_frames(self.video_path, 30)
+        self.intelligent_filter_frames()
 
         self.detect_keypoints()
         angles = self.calculate_angles()

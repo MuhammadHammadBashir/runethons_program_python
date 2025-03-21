@@ -3,10 +3,10 @@ import logging
 from input_manager import InputManager
 # from json_formatter import JSONFormatter
 # from llm_integrator import LLMIntegrator
-# from report_generator import ReportGenerator
+from report_generator import ReportGenerator
 from research_module import ResearchModule
 from video_analyzer import VideoAnalyzer
-
+from report_generator_crew import ScientificPaperCrew
 class PerformanceAnalysisSystem:
     def __init__(self):
         # self.input_manager = InputManager()
@@ -40,12 +40,15 @@ class PerformanceAnalysisSystem:
 
             # # Step 5: Generate the report
             # self.report_generator = ReportGenerator(athlete_data, video_analysis, research_results)
-            # report = await self.report_generator.generate_report(report_id)
+            # report = self.report_generator.generate_report(report_id)
             # logging.info(f"Report generated: {report}")
+
+            crew_system = ScientificPaperCrew(athlete_data, video_analysis, research_results)
+            final_output = crew_system.generate_paper()
 
             # return report
 
-            return ""
+            return final_output
         
         except Exception as e:
             logging.error(f"Error in performance analysis: {str(e)}", exc_info=True)

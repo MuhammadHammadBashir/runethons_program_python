@@ -1,7 +1,7 @@
 import os
 import openai
 import anthropic
-from google.generativeai import GenerativeModel
+import google.generativeai as genai
 
 # Initialize API clients
 openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -57,22 +57,27 @@ def get_gemini_response(prompt):
     """
     Fetch response from Google's Gemini model.
     """
-    genai = GenerativeModel(model_name="gemini-1.5-pro-002", api_key=gemini_api_key)
+    genai.configure(api_key=gemini_api_key)
 
+    # Define model parameters
     generation_config = {
         "temperature": 1,
         "top_p": 0.95,
         "top_k": 40,
         "max_output_tokens": 8192,
-        "response_mime_type": "text/plain"
     }
 
-    chat_session = genai.start_chat(generation_config=generation_config, history=[])
+    # Select the model
+    model = genai.GenerativeModel(model_name="gemini-1.5-pro-002", generation_config=generation_config)
 
-    result = chat_session.send_message("Perform the prompt following the guidelines of the prompt")
 
-    print("Answer from getAlfredAIResponse Gemini:", result.response.text)
-    return result.response.text
+
+    # Generate a response
+    response = model.generate_content(prompt)
+
+    # Print the response
+   
+    return response.text
 
 
 def get_claude_response(prompt, continue_response=False, previous_messages="", temperature=0):
