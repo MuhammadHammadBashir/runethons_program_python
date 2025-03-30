@@ -40,11 +40,11 @@ class VideoAnalyzer:
 
     def analyze(self):
         """Runs the full video analysis process sequentially."""
-        self.extract_frames(self.video_path, 30)
-        self.intelligent_filter_frames()
+        # self.extract_frames(self.video_path, 30)
+        # self.intelligent_filter_frames()
 
         self.detect_keypoints()
-        angles = self.calculate_angles()
+        self.angles = self.calculate_angles()
         
         # print("athleteData:", self.athlete_data)
         # print("angles:", angles)
@@ -391,9 +391,22 @@ class VideoAnalyzer:
 
         return round(velocity_kmh, 2)  # Round to two decimal places
 
-    def get_point(self, points, part):
-        """Helper function to retrieve a specific keypoint."""
-        return next((p for p in points if p["part"] == part), None)
+
+
+    def get_point(self, points, part_name):
+        """
+        Finds a specific keypoint in the list.
+
+        Args:
+            points (list): List of dictionaries containing keypoints.
+            part_name (str): The name of the keypoint to find.
+
+        Returns:
+            dict or None: The keypoint dictionary if found, otherwise None.
+        """
+
+        return next((p for p in points if p['part'].lower() == part_name.lower()), None)
+
     
     def identify_potential_issues(self):
         """
@@ -498,8 +511,8 @@ class VideoAnalyzer:
             "keypoints": self.keypoints,
             "angles": self.angles,
             "velocities": self.velocities,
-            # "potentialIssues": self.identify_potential_issues(),
-            # "injuryRiskAssessment": self.assess_injury_risk(),
+            "potentialIssues": self.identify_potential_issues(),
+            "injuryRiskAssessment": self.assess_injury_risk(),
         }
 
         prompt = f"""
@@ -526,17 +539,22 @@ class VideoAnalyzer:
         # print("generate_video_analysis > prompt:", prompt)
         self.video_analysis = analysis
         return analysis
-    def generate_analysis_report(self):
+    def generate_analysis_report(self,save_path="video_analysics_report.json"):
         """Generate a dictionary containing the full analysis report."""
-        return {
+        video_report =  {
             "keypoints": self.keypoints,
             "angles": self.angles,
             "velocities": self.velocities,
-            # "potentialIssues": self.identify_potential_issues(),
-            # "injuryRiskAssessment": self.assess_injury_risk(),
+            "potentialIssues": self.identify_potential_issues(),
+            "injuryRiskAssessment": self.assess_injury_risk(),
             "videoAnalysis": self.video_analysis,
             "videoFrames": self.video_frames
-        }       
+        }   
+            # Save to a JSON file
+        with open(save_path, "w", encoding="utf-8") as f:
+            json.dump(video_report, f, indent=4, ensure_ascii=False)
+
+        return video_report 
 
         
         

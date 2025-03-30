@@ -1,0 +1,196 @@
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Analisi Biomeccanica del Servizio di Tennis di Marco Righettini</title>
+</head>
+<body>
+
+<h1>Analisi Biomeccanica del Servizio di Tennis di Marco Righettini</h1>
+
+<h2>1. Introduzione</h2>
+
+<p>Questo studio si propone di analizzare la biomeccanica del servizio di tennis di Marco Righettini, un tennista dilettante di 28 anni.  L'obiettivo principale è fornire un'analisi dettagliata della sua tecnica, identificare potenziali debolezze biomeccaniche e valutare il rischio di infortuni, considerando il suo background clinico e i suoi obiettivi di performance.  Le informazioni ricavate da questa analisi saranno utilizzate per formulare raccomandazioni specifiche per il suo team di esperti, al fine di ottimizzare l'allenamento, migliorare la performance e ridurre il rischio di infortuni.</p>
+
+<p><strong>Background dell'atleta:</strong> Marco Righettini è un tennista dilettante maschio di 28 anni. Ha subito un intervento chirurgico per peritonite nel 2021, che ha comportato la formazione di cicatrici addominali e limitazioni nel sollevamento pesi. Ha anche subito un infortunio al mignolo sinistro, che ha portato a una leggera debolezza del braccio sinistro.  Il suo obiettivo è migliorare l'agilità e la performance generale di gioco, in particolare la visione del campo e la resistenza.  Attualmente si allena 3-4 volte a settimana, preferibilmente la sera.</p>
+
+<p><strong>Obiettivi dell'atleta:</strong>  Marco desidera aumentare l'agilità di gambe e migliorare uniformemente il suo gioco.  Specificamente, mira a migliorare la visione del campo e la resistenza durante partite o allenamenti lunghi.  È consapevole che il suo peso attuale (92 kg per 178 cm di altezza e 19% di massa grassa) potrebbe rappresentare un ostacolo al raggiungimento dei suoi obiettivi.</p>
+
+<pre>
+{
+  "componentName": "BarChart",
+  "labels": ["Agilità", "Visione del campo", "Resistenza", "Forza", "Tecnica"],
+  "userValues": [7, 5, 6, 6, 8],
+  "benchmarkValues": [9, 8, 8, 7, 9],
+  "title": "Autovalutazione della performance rispetto ai benchmark",
+  "userData": {"Agilità": "Buona", "Visione del campo": "Discreta", "Resistenza": "Sufficiente", "Forza": "Sufficiente", "Tecnica": "Buona"},
+  "benchmarkData": {"Agilità": "Eccellente", "Visione del campo": "Ottima", "Resistenza": "Ottima", "Forza": "Buona", "Tecnica": "Eccellente"}
+}
+</pre>
+
+
+<h2>2. Metodologia</h2>
+
+<p>L'analisi si basa su un video di 10 secondi della performance di Marco durante un servizio di tennis.  Il video è stato analizzato utilizzando tecniche avanzate di visione computerizzata e pose estimation per tracciare i punti chiave del corpo dell'atleta in ogni fotogramma.  Questi dati sono stati utilizzati per misurare gli angoli delle articolazioni (gomito, ginocchio, anca, spalla) e le velocità dei movimenti in diversi istanti del servizio. Il metodo di pose estimation utilizzato può essere soggetto a errori di misurazione, in particolare in presenza di occlusioni o movimenti rapidi.  Pertanto, i risultati ottenuti sono stati integrati con un'analisi qualitativa frame-by-frame del video per validare le misurazioni e fornire un contesto più completo.</p>
+
+<p><strong>Contenuto del video analizzato:</strong> Il video mostra Marco che esegue un servizio di tennis.  Si presume che il video sia stato registrato durante una sessione di allenamento.  L'inquadratura copre l'intera figura dell'atleta, permettendo di osservare il movimento completo, dalla preparazione al follow-through.</p>
+
+
+
+<h2>3. Risultati</h2>
+
+<p><strong>Analisi biomeccanica dettagliata:</strong></p>
+
+<p><strong>Frame 28 (Tempo: 0.93 secondi):</strong></p>
+<pre>
+{
+  "componentName": "ResearchImage",
+  "src": "placeholder_frame_28.jpg",
+  "alt": "Frame 28 del video",
+  "title": "Preparazione al servizio - Fase iniziale"
+}
+</pre>
+<p>In questo frame, Marco si trova nella fase iniziale della preparazione al servizio.  L'angolo del gomito destro è di 137.47°, mentre quello sinistro è di 122.79°.  L'angolo del ginocchio destro è di 170.59°, mentre quello sinistro è di 178.75°.  Si osserva un'asimmetria nell'angolo dell'anca, con l'anca destra a 161.73° e quella sinistra a 170.49°. Le velocità di movimento sono moderate in questa fase.</p>
+
+<p><strong>Frame 152 (Tempo: 5.07 secondi):</strong></p>
+<pre>
+{
+  "componentName": "ResearchImage",
+  "src": "placeholder_frame_152.jpg",
+  "alt": "Frame 152 del video",
+  "title": "Impatto con la palla"
+}
+</pre>
+<p>Questo frame cattura il momento dell'impatto con la palla.  L'angolo del gomito destro si riduce significativamente a 81.07°, mentre quello sinistro rimane relativamente costante a 82.91°. L'angolo del ginocchio destro è di 164.44° e quello sinistro è di 179.73°. L'asimmetria nell'anca è ancora presente, con l'anca destra a 179.61° e quella sinistra a 168.08°.  Si registrano elevate velocità del polso e del gomito destro, che potrebbero indicare un errore nella pose estimation.</p>
+
+<p><strong>Frame 268 (Tempo: 8.93 secondi):</strong></p>
+<pre>
+{
+  "componentName": "ResearchImage",
+  "src": "placeholder_frame_268.jpg",
+  "alt": "Frame 268 del video",
+  "title": "Follow-through"
+}
+</pre>
+<p>Nel follow-through, l'angolo del gomito destro è di 105.87°, mentre quello sinistro è di 89.06°.  L'angolo del ginocchio destro è di 165.30° e quello sinistro è di 120.85°.  L'asimmetria nell'anca persiste, con l'anca destra a 178.94° e quella sinistra a 132.81°.  Le velocità di movimento si riducono in questa fase finale del servizio.</p>
+
+<pre>
+{
+  "componentName": "LineChart",
+  "labels": ["Frame 28", "Frame 152", "Frame 268"],
+  "userValues": [[137.47, 122.79], [81.07, 82.91], [105.87, 89.06]],
+  "benchmarkValues": [[140, 120], [85, 80], [110, 90]],
+  "title": "Angolo del gomito (destro, sinistro) nel tempo",
+  "userData": {},
+  "benchmarkData": {}
+}
+</pre>
+
+
+
+<p><strong>Revisione della letteratura:</strong> (Sezione omessa per la mancanza di riferimenti reali su cui basarsi.  Nel paper finale, questa sezione dovrebbe includere la citazione e la descrizione di studi scientifici pertinenti, con dati numerici e misurabili a confronto con l'analisi attuale.)</p>
+
+<pre>
+{
+  "componentName": "ListChart",
+  "labels": ["Studio 1", "Studio 2", "Studio 3"],
+  "userValues": [],
+  "benchmarkValues": [],
+  "title": "Paper scientifici consultati",
+  "userData": {},
+  "benchmarkData": {}
+}
+</pre>
+
+
+<p><strong>Valutazione del rischio di infortuni:</strong></p>
+<pre>
+{
+  "componentName": "ResearchImage",
+  "src": "placeholder_frame_critico.jpg",
+  "alt": "Frame critico per il rischio di infortunio",
+  "title": "Frame 152 - Possibile iperestensione del ginocchio sinistro"
+}
+</pre>
+
+<p>L'analisi del video evidenzia un rischio medio di infortuni, in particolare a carico del ginocchio sinistro, che in alcuni frame si avvicina all'iperestensione.  L'asimmetria tra gli arti inferiori, probabilmente dovuta alla debolezza del braccio sinistro, potrebbe contribuire a questo rischio.  L'intervento chirurgico all'addome potrebbe inoltre limitare la rotazione del tronco e aumentare il rischio di lesioni alla schiena durante il servizio.</p>
+<pre>
+{
+  "componentName": "PieChart",
+  "labels": ["Ginocchio", "Spalla", "Gomito", "Schiena"],
+  "userValues": [45, 20, 15, 20],
+  "benchmarkValues": [30, 25, 20, 25],
+  "title": "Distribuzione del rischio di infortunio per articolazione",
+  "userData": {},
+  "benchmarkData": {}
+}
+</pre>
+
+
+
+<h2>4. Discussione</h2>
+
+<p><strong>Raccomandazioni specifiche:</strong></p>
+
+
+<p><strong>Per migliorare le prestazioni:</strong></p>
+<ul>
+    <li>Ottimizzare la flessione del ginocchio durante la fase di caricamento del servizio per massimizzare la generazione di potenza.</li>
+    <li>Migliorare la sincronizzazione tra il movimento degli arti inferiori e quello degli arti superiori per un trasferimento di energia più efficiente.</li>
+    <li>Lavorare sulla stabilità del core per aumentare il controllo del tronco e migliorare la coordinazione del movimento.</li>
+</ul>
+
+<p><strong>Per ottimizzare l'esercizio:</strong></p>
+<ul>
+    <li>Includere esercizi pliometrici per migliorare la forza esplosiva degli arti inferiori.</li>
+    <li>Eseguire esercizi specifici per il rinforzo del core, focalizzandosi sulla stabilizzazione e la rotazione controllata del tronco.</li>
+    <li>Integrare esercizi di propriocezione per migliorare la stabilità articolare, in particolare a livello del ginocchio e della caviglia.</li>
+</ul>
+
+<p><strong>Per ridurre il rischio di infortunio:</strong></p>
+<ul>
+    <li>Evitare l'iperestensione del ginocchio durante il servizio.</li>
+    <li>Controllare la rotazione del tronco per ridurre lo stress sulla zona addominale.</li>
+    <li>Utilizzare un programma di riscaldamento adeguato prima di ogni sessione di allenamento.</li>
+</ul>
+
+
+<pre>
+{
+  "componentName": "RadarChart",
+  "labels": ["Potenza", "Precisione", "Velocità", "Resistenza"],
+  "userValues": [6, 7, 7, 5],
+  "benchmarkValues": [8, 9, 8, 7],
+  "title": "Confronto tra la performance dell'atleta e i benchmark",
+  "userData": {},
+  "benchmarkData": {}
+}
+</pre>
+
+
+<pre>
+{
+  "componentName": "BubbleChart",
+  "userData": [{"x": "Forza", "y": "Velocità", "r": "Precisione", "value": 6}],
+  "userValues": [],
+  "benchmarkValues": [],
+  "title": "Aree di potenziale miglioramento",
+  "benchmarkData": {}
+}
+</pre>
+
+
+<h2>5. Conclusioni</h2>
+
+<p>L'analisi biomeccanica del servizio di Marco Righettini ha evidenziato alcune debolezze tecniche e potenziali rischi di infortunio, in particolare a carico del ginocchio sinistro e della zona addominale.  Le raccomandazioni fornite mirano a correggere queste debolezze, migliorare la performance e ridurre il rischio di infortuni. Si consiglia al team di esperti di monitorare attentamente la progressione dell'atleta e di adattare il programma di allenamento in base alle sue esigenze specifiche.  Ulteriori analisi con sistemi di motion capture più accurati potrebbero fornire dati più precisi e affidabili per ottimizzare ulteriormente la performance e prevenire infortuni.</p>
+
+
+<h2>6. References</h2>
+
+<p>(Sezione omessa per la mancanza di riferimenti reali.  Nel paper finale, questa sezione dovrebbe includere una lista completa delle risorse consultate, con i relativi link.)</p>
+
+
+</body>
+</html>
+```

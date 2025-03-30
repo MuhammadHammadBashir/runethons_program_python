@@ -2,12 +2,25 @@ import os
 import openai
 import anthropic
 import google.generativeai as genai
+from pydantic import BaseModel, HttpUrl
+from typing import List, Optional,Union
 
 # Initialize API clients
 openai_api_key = os.getenv("OPENAI_API_KEY")
 anthropic_api_key = os.getenv("ANTHROPIC_API_KEY")
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 
+class BibliographyEntry(BaseModel):
+    title: str
+    authors: List[str]
+    year: int
+    source: str
+    doi: Optional[Union[HttpUrl, str]]  # Ensures doi is either a valid URL or None
+
+class ResearchOutput(BaseModel):
+    research_summary: str
+    bibliography: List[BibliographyEntry]
+    
 def get_alfred_ai_response(prompt, model="claude", continue_response=False, previous_messages="", temperature=0):
     """
     Function to get AI-generated responses from Claude, GPT-4, or Gemini.

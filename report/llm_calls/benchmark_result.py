@@ -1,32 +1,28 @@
 from dotenv import load_dotenv
 import os
-from openai import OpenAI
+import anthropic
+
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url="https://api.perplexity.ai")
-# chat completion without streaming
+client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
+# chat completion without streaming
 def benchmark_result(research_prompt):
     messages = [
         {
             "role": "system",
-            "content": (
-    """
-    You are research assistant that will benchmark results to support my work
-    """
-            ),
+            "content": "You are a research assistant that will benchmark results to support my work."
         },
         {   
             "role": "user",
-            "content": (
-            research_prompt
-            ),
+            "content": research_prompt
         },
     ]
 
-    response = client.chat.completions.create(
-        model="gpt-4o",
+    response = client.messages.create(
+        model="claude-3-5-sonnet-20240620",
+        max_tokens=4096,
         messages=messages,
     )
 
-    return response.choices[0].message.content
+    return response.content[0].text

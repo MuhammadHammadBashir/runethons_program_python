@@ -1,0 +1,68 @@
+[
+    {
+      "user_id": "6705bbe25e314dfce312aa49",
+      "message_type": "text",
+      "role": "user",
+      "isUser": true,
+      "message_text": "Coach, I’m struggling with my drive phase. My hip extension seems limited, and my ground contact time in the first 10m is still too high. Any biomechanical adjustments I should focus on?",
+      "message_files": [],
+      "reply_to_message_id": null,
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T14:30:00Z",
+      "updatedAt": "2025-03-27T14:30:00Z"
+    },
+    {
+      "user_id": "6705bbe25e314dfce312aa49",
+      "message_type": "text",
+      "role": "user",
+      "isUser": true,
+      "message_text": "Also, my force application angles seem off during my acceleration phase. Should I be pushing more horizontally or vertically after 20m?",
+      "message_files": [],
+      "reply_to_message_id": null,
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T14:35:00Z",
+      "updatedAt": "2025-03-27T14:35:00Z"
+    },
+    {
+      "user_id": "6705bbe25e314dfce312aa49",
+      "message_type": "text",
+      "role": "user",
+      "isUser": true,
+      "message_text": "I reviewed my video analysis, and my shin angle at blocks is around 42 degrees. Should I aim to get it lower for better force production?",
+      "message_files": [],
+      "reply_to_message_id": null,
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T18:00:00Z",
+      "updatedAt": "2025-03-27T18:00:00Z"
+    },
+    {
+      "user_id": "6705bbe25e314dfce312aa49",
+      "message_type": "text",
+      "role": "user",
+      "isUser": true,
+      "message_text": "During my maximal velocity phase, I feel like my knee drive is not high enough, and my swing phase isn’t efficient. How can I optimize my front-side mechanics?",
+      "message_files": [],
+      "reply_to_message_id": null,
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T18:03:00Z",
+      "updatedAt": "2025-03-27T18:03:00Z"
+    },
+    {
+      "user_id": "6705bbe25e314dfce312aa49",
+      "message_type": "text",
+      "role": "user",
+      "isUser": true,
+      "message_text": "Thanks, Coach! I’ll apply these cues in my session tomorrow and see if I can get my ground contact time below 0.09s in my top-end speed phase.",
+      "message_files": [],
+      "reply_to_message_id": null,
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T18:07:00Z",
+      "updatedAt": "2025-03-27T18:07:00Z"
+    }
+  ]
+  

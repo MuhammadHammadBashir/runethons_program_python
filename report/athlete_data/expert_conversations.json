@@ -1,0 +1,68 @@
+[
+    {
+      "user_id": "coach_12345",
+      "message_type": "text",
+      "role": "assistant",
+      "isUser": false,
+      "message_text": "Marco, let’s address your drive phase first. Your ground contact time in the first 10m should be around 0.12s, but if it’s too high, you might be over-striding. Focus on triple extension at push-off—hip, knee, and ankle should align explosively for maximum force transfer.",
+      "message_files": [],
+      "reply_to_message_id": "6705bbe25e314dfce312aa49",
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T14:32:00Z",
+      "updatedAt": "2025-03-27T14:32:00Z"
+    },
+    {
+      "user_id": "coach_12345",
+      "message_type": "text",
+      "role": "assistant",
+      "isUser": false,
+      "message_text": "For your acceleration phase, after 20m, your force vectors should gradually shift from horizontal (65-75%) to more vertical as you transition to upright sprinting. Right now, your force application might be too horizontal, causing excessive forward lean.",
+      "message_files": [],
+      "reply_to_message_id": "6705bbe25e314dfce312aa49",
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T14:37:00Z",
+      "updatedAt": "2025-03-27T14:37:00Z"
+    },
+    {
+      "user_id": "coach_12345",
+      "message_type": "text",
+      "role": "assistant",
+      "isUser": false,
+      "message_text": "42-degree shin angle at blocks is good but could go lower (35-38 degrees) if you want a more aggressive push. Try engaging your glutes earlier to improve hip extension strength.",
+      "message_files": [],
+      "reply_to_message_id": "6705bbe25e314dfce312aa49",
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T18:05:00Z",
+      "updatedAt": "2025-03-27T18:05:00Z"
+    },
+    {
+      "user_id": "coach_12345",
+      "message_type": "text",
+      "role": "assistant",
+      "isUser": false,
+      "message_text": "Your front-side mechanics need optimization in the maximal velocity phase. Work on higher knee drive (target ~95-degree hip flexion) and efficient foot recovery to reduce braking forces. Also, dorsiflex your foot at mid-swing for better limb repositioning.",
+      "message_files": [],
+      "reply_to_message_id": "6705bbe25e314dfce312aa49",
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T18:06:00Z",
+      "updatedAt": "2025-03-27T18:06:00Z"
+    },
+    {
+      "user_id": "coach_12345",
+      "message_type": "text",
+      "role": "assistant",
+      "isUser": false,
+      "message_text": "That’s the right approach! If we get your ground contact time to 0.09s at max velocity, your stride frequency will naturally increase, leading to better efficiency. Keep me posted on your session results!",
+      "message_files": [],
+      "reply_to_message_id": "6705bbe25e314dfce312aa49",
+      "data": {},
+      "read": false,
+      "createdAt": "2025-03-27T18:08:00Z",
+      "updatedAt": "2025-03-27T18:08:00Z"
+    }
+  ]
+  

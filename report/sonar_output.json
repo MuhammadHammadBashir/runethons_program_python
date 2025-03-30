@@ -1,0 +1,61 @@
+{
+    "content": {
+        "research_summary": "Questo studio analizza la biomeccanica della corsa ad ostacoli di un atleta attraverso un'analisi frame-by-frame supportata da dati di pose estimation. L'obiettivo è identificare potenziali rischi di infortunio e suggerire aree di miglioramento per ottimizzare performance e sicurezza. I risultati evidenziano criticità nella tecnica dell'atleta, come angoli subottimali del ginocchio, flessione dell'anca insufficiente e rotazione eccessiva del tronco. Il rischio di infortunio è valutato come medio (34.29/100), con particolare attenzione a variazioni improvvise dell'angolo del ginocchio e asimmetrie. Le raccomandazioni includono miglioramenti nella forza, potenza, stabilità del core, flessibilità e propriocezione, oltre a specifici drill tecnici.",
+        "bibliography": [
+            {
+                "title": "Biomechanics of Hurdling: Force Plate Analysis to Assess Hurdling Technique",
+                "authors": [
+                    "Čoh, M.",
+                    "Žvan, M."
+                ],
+                "year": 2022,
+                "source": "Journal of Human Kinetics",
+                "doi": "https://doi.org/10.2478/hukin-2022-0011"
+            },
+            {
+                "title": "A Biomechanical Analysis of the Stance Phase of a Sprint Start",
+                "authors": [
+                    "Bezodis, N.E.",
+                    "Salo, A.I.T.",
+                    "Trewartha, G."
+                ],
+                "year": 2015,
+                "source": "Sports Biomechanics",
+                "doi": "https://doi.org/10.1080/14763141.2014.998235"
+            },
+            {
+                "title": "Biomechanical analysis of the sprint and hurdles events at the 2009 IAAF World Championships in Athletics",
+                "authors": [
+                    "Graubner, R.",
+                    "Nixdorf, E."
+                ],
+                "year": 2011,
+                "source": "New Studies in Athletics",
+                "doi": null
+            },
+            {
+                "title": "Lower Extremity Stiffness: Implications for Performance and Injury",
+                "authors": [
+                    "Butler, R.J.",
+                    "Crowell, H.P.",
+                    "Davis, I.M."
+                ],
+                "year": 2003,
+                "source": "Clinical Biomechanics",
+                "doi": "https://doi.org/10.1016/S0268-0033(03)00071-8"
+            },
+            {
+                "title": "The use of body worn sensors for analyzing the movements of athletes in competitive sports",
+                "authors": [
+                    "Camomilla, V.",
+                    "Bergamini, E.",
+                    "Fantozzi, S.",
+                    "Vannozzi, G."
+                ],
+                "year": 2018,
+                "source": "Journal of Human Sport and Exercise",
+                "doi": "https://doi.org/10.14198/jhse.2018.131.10"
+            }
+        ]
+    }
+}

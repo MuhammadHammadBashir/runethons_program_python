@@ -18,5 +18,7 @@ def prompt_benchmark_results(athlete, video_analysis, frame_analysis,scientific_
     - Scientific paper connected to my research from which to try to pick up benchmarks: {scientific_paper_json}
 
     Using this information, could you analyze the relevant files and provide a complete analysis that integrates all these elements, obtaining concrete and measurable data to be compared between the results of the paper and the video analysis?
+
+    Restriction: Just directly write analysics,  nothing like that sure I can help you etc.
         """
     return prompt

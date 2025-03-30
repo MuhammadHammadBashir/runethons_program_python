@@ -111,7 +111,7 @@ def analyze_video(frames_folder, user_prompt=''):
                      f'generare un prompt dettagliato per analizzare questo gruppo di frame. Il prompt deve guidare l\'analisi in modo da soddisfare '
                      f'la richiesta dell\'utente. Rispondi semplicemente con il prompt in italiano senza aggiungere commenti o considerazioni.')
     
-    group_prompt = get_alfred_ai_response(prompt_frames)
+    group_prompt = get_alfred_ai_response(prompt_frames,model='gemini')
 
     # Function to analyze a single group
     def analyze_segment(i, group):
@@ -142,7 +142,7 @@ def analyze_video(frames_folder, user_prompt=''):
                                 f"Rispondi semplicemente con l'analisi finale senza aggiungere commenti o considerazioni.")
 
     print("completeAnalysisPrompt:", complete_analysis_prompt)
-    final_analysis = get_alfred_ai_response(complete_analysis_prompt)
+    final_analysis = get_alfred_ai_response(complete_analysis_prompt,'gemini')
 
     print("Final Analysis:", final_analysis)
     return final_analysis
