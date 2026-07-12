@@ -1,212 +1,291 @@
-RunTheOns – AI-Powered Virtual Sports Health Coach & Biomechanics Analysis
+# 🏃 RunTheOns – AI-Powered Virtual Sports Health Coach & Biomechanics Analysis
 
-🌐 Website: https://www.runtheons.com/
+**Website:** https://www.runtheons.com/
 
-Overview
+---
 
-RunTheOns is an AI-powered virtual sports coach designed to analyze athlete movements from smartphone videos and provide personalized biomechanics, health, and performance feedback. The platform combines computer vision, biomechanics, sports science, and large language models to transform short gameplay or training videos into comprehensive coaching reports.
+# Overview
 
-Instead of simply tracking body joints, the system evaluates movement quality, identifies biomechanical inefficiencies, estimates injury risk, and delivers evidence-based recommendations generated from scientific literature.
+RunTheOns is an AI-powered virtual sports coaching platform that combines **computer vision, biomechanics, sports science, and generative AI** to analyze athlete performance from smartphone videos.
 
-Key Features
-AI-Based Biomechanics Analysis
-Automatic pose estimation
-Joint angle calculation
-Motion tracking
-Velocity and acceleration estimation
-Movement symmetry analysis
-Injury risk assessment
-Performance evaluation
-Pose Estimation
+The platform processes short training or gameplay videos, extracts biomechanical measurements, evaluates movement quality, estimates injury risk, and generates personalized coaching reports supported by scientific literature.
 
-The system extracts athlete landmarks using modern pose estimation models, including:
+Rather than simply tracking body landmarks, the system compares an athlete's movement against ideal biomechanical patterns from sports science research and provides actionable recommendations for improving performance.
 
-MediaPipe Pose
-Ultralytics Pose
-Vision-Language Models for posture understanding
+---
 
-Body landmarks are used to calculate:
+# Features
 
-Knee angles
-Hip angles
-Elbow angles
-Shoulder rotation
-Ankle movement
-Spine alignment
-Head posture
-Movement Analysis
+- AI-powered biomechanics analysis
+- Automatic pose estimation
+- Joint angle calculation
+- Velocity and acceleration estimation
+- Injury risk assessment
+- Movement quality evaluation
+- Personalized coaching reports
+- Nutrition recommendations
+- Multi-agent AI coaching
+- Research-backed recommendations using RAG
+- Video understanding with multimodal LLMs
 
-The platform measures:
+---
 
-Jump height
-Contact time
-Flight time
-Reactive Strength Index (RSI)
-Landing mechanics
-Sprint phases
-Acceleration
-Deceleration
-Balance
-Stability
-Movement symmetry
+# System Architecture
 
-These metrics are compared against sports science references to identify areas for improvement.
-
-AI Coaching Reports
-
-One of the main goals of RunTheOns is to provide athletes with personalized coaching instead of raw measurements.
-
-The system compares:
-
-Actual athlete movement
-Ideal movement patterns
-Published biomechanics research
-
-It then generates detailed coaching reports explaining:
-
-What the athlete performed correctly
-Technical mistakes
-Injury risks
-Performance limitations
-Recommended improvements
-Vision AI Pipeline
-
-The platform combines multiple Vision AI models to improve analysis accuracy.
-
-Claude Sonnet 3.7
-
-Used for block-based image understanding and posture evaluation.
-
-GPT-4o Vision
-
-Processes frame-by-frame athlete movements for detailed motion analysis.
-
-Gemini 2.5
-
-Combines outputs from different vision models using its large context window to generate consistent and accurate biomechanics reports.
-
-The system samples videos at approximately 6 FPS, allowing efficient processing while preserving sufficient temporal information for movement analysis.
-
+```
+Video Upload
+      │
+      ▼
+Video Processing
+(OpenCV + FFmpeg)
+      │
+      ▼
+Frame Extraction (6 FPS)
+      │
+      ▼
+Pose Detection
+(MediaPipe / Ultralytics)
+      │
+      ▼
+Biomechanics Engine
+│
+├── Joint Angles
+├── Velocity
+├── Acceleration
+├── Symmetry
+├── Contact Time
+├── Flight Time
+└── Risk Assessment
+      │
+      ▼
+Vision LLM Analysis
+│
+├── Claude Vision
+├── GPT-4o Vision
+└── Gemini 2.5
+      │
+      ▼
 Multi-Agent AI System
+│
+├── Fitness Coach
+├── Nutrition Coach
+└── Game Coach
+      │
+      ▼
+RAG Knowledge Engine
+│
+├── arXiv
+├── Semantic Scholar
+├── YouTube
+└── Sports Science Papers
+      │
+      ▼
+Final Athlete Report
+```
 
-RunTheOns uses multiple AI agents that collaborate to generate personalized recommendations.
+---
 
-Fitness Coach
+# Computer Vision Pipeline
 
-Analyzes movement quality and creates individualized training plans.
+## Video Processing
 
-Nutrition Advisor
+- Video preprocessing using FFmpeg
+- Frame extraction
+- Image normalization
+- Frame synchronization
+- Motion segmentation
 
-Generates nutrition recommendations based on athlete goals and performance.
+---
 
-Game Coach
+## Pose Estimation
 
-Provides sport-specific technical feedback and tactical suggestions.
+The system extracts body landmarks using:
 
-Each agent contributes to the final report using structured prompt engineering workflows.
+- MediaPipe Pose
+- Ultralytics Pose Models
 
-RAG-Based Knowledge System
+Keypoints are tracked across frames to analyze athlete movement with high temporal consistency.
 
-To ensure recommendations are grounded in scientific evidence, the platform integrates Retrieval-Augmented Generation (RAG).
+---
 
-The system retrieves relevant information from:
+## Biomechanical Analysis
 
-arXiv
-Semantic Scholar
-YouTube educational content
-Research publications
-Sports science literature
+The platform computes:
 
-Rather than relying solely on LLM knowledge, recommendations are supported by external evidence and citations.
+- Joint angles
+- Angular velocity
+- Limb symmetry
+- Landing mechanics
+- Jump height
+- Contact time
+- Flight time
+- Reactive Strength Index (RSI)
+- Sprint acceleration
+- Deceleration
+- Body alignment
+- Balance and stability
 
-Athlete Reports
+---
 
-Each analysis generates a detailed report containing:
+# Vision AI Pipeline
 
-Biomechanics assessment
-Performance summary
-Joint angle visualizations
-Movement quality evaluation
-Injury risk analysis
-Personalized training recommendations
-Nutrition guidance
-Recovery suggestions
-Scientific references
-Progress tracking
+To improve reliability, multiple Vision-Language Models are combined.
 
-Reports are designed for athletes, coaches, and sports professionals.
+### Claude Sonnet 3.7
 
-Computer Vision Components
-Pose estimation
-Human keypoint detection
-Joint tracking
-Motion analysis
-Frame extraction
-Video preprocessing
-Athlete segmentation
-Landmark smoothing
-Threshold-based event detection
-Temporal movement analysis
-AI Components
-Vision-Language Models
-Prompt Engineering
-Multi-Agent Systems
-Retrieval-Augmented Generation (RAG)
-Embedding Search
-Semantic Retrieval
-Scientific Literature Analysis
-Personalized Recommendation Generation
-Backend Architecture
+Used for block-based understanding of athlete posture and overall movement.
 
-The platform exposes REST APIs through FastAPI for:
+---
 
-Video upload
-Video processing
-Pose extraction
-AI report generation
-Research retrieval
-Athlete profile management
-Technologies Used
-Computer Vision
-OpenCV
-MediaPipe
-Ultralytics YOLO
-FFmpeg
-Pillow (PIL)
-Large Language Models
-Gemini 2.5
-Claude Sonnet
-GPT-4o
-LLaVA
-AI Frameworks
-LangChain
-CrewAI
-Hugging Face Transformers
-Retrieval & Knowledge
-Pinecone
-Embedding Models
-Semantic Scholar
-arXiv
-Perplexity API
-YouTube Knowledge Retrieval
-Backend
-Python
-FastAPI
-Applications
-Sports biomechanics
-Athlete performance analysis
-Virtual coaching
-Injury prevention
-Sports science research
-Fitness assessment
-Personalized training
-AI-powered health coaching
-Future Enhancements
-Real-time live coaching during training
-Mobile application support
-Multi-camera biomechanical analysis
-Wearable sensor integration
-Team performance dashboards
-Coach collaboration portal
-Longitudinal athlete progress tracking
-AI-powered rehabilitation programs
+### GPT-4o Vision
+
+Processes videos frame-by-frame to extract detailed movement information.
+
+---
+
+### Gemini 2.5
+
+Gemini combines outputs from all vision models using its large context window to generate a unified biomechanics analysis.
+
+This multi-model approach produces significantly more stable and accurate reports than relying on a single model.
+
+---
+
+# AI Coaching System
+
+Instead of generating simple metrics, the platform simulates multiple expert coaches.
+
+## Fitness Coach
+
+Provides:
+
+- Exercise recommendations
+- Technique improvements
+- Performance optimization
+
+---
+
+## Nutrition Advisor
+
+Generates:
+
+- Nutrition plans
+- Recovery guidance
+- Hydration recommendations
+
+---
+
+## Game Coach
+
+Provides:
+
+- Tactical suggestions
+- Sport-specific coaching
+- Technical corrections
+
+---
+
+# Retrieval-Augmented Generation (RAG)
+
+Recommendations are backed by scientific literature instead of relying only on LLM knowledge.
+
+The RAG system retrieves information from:
+
+- arXiv
+- Semantic Scholar
+- YouTube educational content
+- Sports science publications
+- Perplexity Search
+
+This allows every recommendation to include evidence-based explanations and citations.
+
+---
+
+# Athlete Report
+
+The final report contains:
+
+- Performance summary
+- Biomechanics analysis
+- Joint angle visualization
+- Injury risk assessment
+- Technique comparison
+- Personalized training plan
+- Nutrition recommendations
+- Recovery guidance
+- Scientific references
+
+---
+
+# Technologies Used
+
+## Computer Vision
+
+- OpenCV
+- MediaPipe
+- Ultralytics YOLO
+- FFmpeg
+- Pillow (PIL)
+
+## Large Language Models
+
+- Gemini 2.5
+- Claude Sonnet
+- GPT-4o
+- LLaVA
+
+## AI Frameworks
+
+- LangChain
+- CrewAI
+- Hugging Face Transformers
+
+## Retrieval & Knowledge
+
+- Pinecone
+- Embedding Models
+- Semantic Scholar
+- arXiv
+- Perplexity API
+
+## Backend
+
+- Python
+- FastAPI
+
+---
+
+# Applications
+
+- Sports performance analysis
+- Athlete biomechanics
+- Injury prevention
+- Virtual coaching
+- Personalized fitness
+- Sports science research
+- Rehabilitation monitoring
+
+---
+
+# Future Roadmap
+
+- Real-time live coaching
+- Mobile application
+- Multi-camera biomechanics
+- Wearable sensor integration
+- Team dashboards
+- Long-term athlete progress tracking
+- AI rehabilitation assistant
+
+---
+
+# Project Highlights
+
+- AI-powered virtual sports coach
+- Multi-modal computer vision pipeline
+- Vision-Language Model integration
+- Multi-agent coaching architecture
+- Research-backed recommendations using RAG
+- Personalized athlete reports
+- Production-ready FastAPI backend
+- End-to-end video understanding pipeline
